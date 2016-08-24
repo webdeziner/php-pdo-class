@@ -8,7 +8,7 @@ $db = new Database('host', 'username', 'password', 'database');
 Select<br>
 $db->select(['id', 'name'])
     ->from('users')
-    ->where(['username = ' => 'webdeziner']);
+    ->where(['username = ' => 'webdeziner']);<br>
 $rows = $db->fetchAll();
 <br>
 foreach($rows as $row) {<br>
