@@ -10,9 +10,9 @@ $db->select(['id', 'name'])
     ->from('users')
     ->where(['username = ' => 'webdeziner']);
 $rows = $db->fetchAll();
-
-foreach($rows as $row) {
-    echo $row['id'].': '.$row['name']."<br>";
+<br>
+foreach($rows as $row) {<br>
+    echo $row['id'].': '.$row['name'];<br>
 }
 <br><br>
 Insert<br>
