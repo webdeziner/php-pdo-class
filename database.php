@@ -113,22 +113,23 @@ class Database {
         return $this;
     }
 
-    /* TODO add these
-    public function leftJoin($leftJoin)
+    public function leftJoin($joinTable, $on)
     {
-
+        $this->query .= ' LEFT JOIN '.$table. ' ON '.$on;
+        return $this;
     }
 
-    public function innerJoin($innerJoin)
+    public function rightJoin($table, $on)
     {
-
+        $this->query .= ' RIGHT JOIN '.$table. ' ON '.$on;
+        return $this;
     }
 
-    public function join($join)
+    public function join($table, $on)
     {
-
+        $this->query .= ' JOIN '.$table. ' ON '.$on;
+        return $this;
     }
-    */
 
     public function where($where = [])
     {
