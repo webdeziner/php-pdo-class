@@ -95,7 +95,7 @@ class Database {
     public function select($select = [])
     {
         $parameters = '';
-        if(empty($select)) {
+        if(empty($select) || $select == '*') {
             $parameters = '*';
         } else {
             foreach($select as $parameter) {
