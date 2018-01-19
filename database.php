@@ -59,6 +59,12 @@ class Database {
             $this->error = $ex->getMessage();
         }
     }
+    
+    public function close()
+    {
+        $this->reset();
+        $this->connection = null;   
+    }
 
     public function reset()
     {
