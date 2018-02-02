@@ -242,6 +242,13 @@ class Database {
         $this->run();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
+    
+    public function rawFetchAll($query)
+    {
+      $this->stmt = $this->connection->query($query);
+      $this->stmt->execute();
+      return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
     public function beginTransaction()
     {
