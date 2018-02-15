@@ -142,7 +142,9 @@ class Database {
         $parameter = key($where);
         $value = current($where);
 
-        $parameter = str_ireplace('=', '', $parameter);
+        $find = ['=', '<', '>', '<=', '>=', '!=', '<>'];
+        $replace = [''];
+        $parameter = str_ireplace($find, $replace, $parameter);
         $parameter = trim($parameter);
         $this->bind[$parameter] = $value;
 
